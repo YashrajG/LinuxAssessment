@@ -1,0 +1,24 @@
+Problem 1:
+
+grep -w Amazon Input.txt && (grep -w -o Amazon Input.txt | wc -w)
+
+
+Problem 2:
+
+ls | grep .txt$
+
+
+Problem 3:
+
+for d in $(ls|grep aws); do if [[ -d $d ]]; then (cd "$d" && pwd); fi; done;
+
+
+Problem 4:
+
+sed "s/\ba\b/an/g" Input.txt
+
+
+Problem 5:
+
+jq '.Records[].s3.bucket.arn' s3_info.txt
+
